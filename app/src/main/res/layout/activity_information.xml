@@ -5,5 +5,94 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.InformationActivity">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_add"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:backgroundTint="#66D6EF"
+        android:layout_height="60dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/name_use"
+                android:layout_marginLeft="30dp"
+                android:textStyle="normal"
+                android:textColor="#fff"
+                android:textSize="30sp"
+                android:text="name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginTop="60dp"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/name_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:padding="10dp"
+                android:text="Movie name"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="normal" />
+            <TextView
+                android:id="@+id/authors1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name_1"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:padding="10dp"
+                android:text="Movie authors:"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+            <TextView
+                android:id="@+id/about1"
+                app:layout_constraintTop_toBottomOf="@id/authors1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:padding="10dp"
+                android:text="About movie:"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+            <TextView
+                android:id="@+id/date1"
+                app:layout_constraintTop_toBottomOf="@id/about1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:padding="10dp"
+                android:text="Date:"
+                android:textColor="@color/black"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
