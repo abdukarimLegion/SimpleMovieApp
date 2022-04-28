@@ -1,8 +1,8 @@
 package uz.com.simplemovieapp.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_edit.*
@@ -35,9 +35,11 @@ class EditActivity : AppCompatActivity() {
                 var type = object : TypeToken<ArrayList<MovieModel>>() {}.type
                 list1.addAll(gson.fromJson(text, type))
             }
-            if (edite_name.isEmpty()&& edite_authors.isNotEmpty() && movie1.isNotEmpty() && date1.isNotEmpty()){
+            if (edite_name.trim().isEmpty() && edite_authors.trim().isNotEmpty() && movie1.trim()
+                    .isNotEmpty() && date1.trim().isNotEmpty()
+            ) {
                 Toast.makeText(this, "Kino nomi mavju edmas", Toast.LENGTH_SHORT).show()
-            }else if (edite_name.isNotEmpty() && edite_authors.isNotEmpty() && movie1.isNotEmpty() && date1.isNotEmpty()) {
+            } else if (edite_name.trim().isNotEmpty() && edite_authors.trim().isNotEmpty() && movie1.trim().isNotEmpty() && date1.trim().isNotEmpty()) {
                 list1.removeAll(listOf(position))
                 MySharedPreferences.clear()
                 if (MySharedPreferences.text!!.isEmpty()) {
